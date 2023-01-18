@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<form action="users/get/" target="_blank">
+    <button id="allUsersBtn">Список всех пользователей</button>
+</form>
+
+    IP:
+<br />
+<input id="userId" type="number" />
+<button id="UserIdBtn">Найти пользователя по ip</button>
+
+<form action="/users/post" target="_blank">
+    <button id="AddBtn">Добавить пользователя</button>
+</form>
+<script>
+    document.getElementById("UserIdBtn").addEventListener("click", async () => {
+
+        const id = document.getElementById("userId").value;
+        if (id === "")
+            await createUser(name, age);
+        else
+            window.location.href = 'users/getid/' + id;
+    });
+</script>
