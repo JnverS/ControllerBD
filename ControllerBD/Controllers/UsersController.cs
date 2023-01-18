@@ -22,8 +22,10 @@ public class UsersController : Controller
     public ViewResult GetId(int id)
     {
         var user = _allUsers.getObjUser(id);
-
-        return View(user);
+        if (user != null) {
+            return View(user);
+        }
+        return View();
     }
     [HttpGet]
     public ViewResult Post()

@@ -1,6 +1,19 @@
 ﻿
-<h2>Все пользователи</h2>
-@foreach (User user in Model)
-{
-    @Html.Partial("AllUsers", user)
-}
+<div>
+    <h2>Все пользователи</h2>
+    <table>
+        <tr>
+            <td><p>Ник</p></td>
+            <td><p>Уровень</p></td>
+            <td><p>Счет</p></td>
+        </tr>
+        @foreach (var user in @Model)
+        {
+            <tr>
+                <td>@user.NickName</td>
+                <td>@user.Lvl</td>
+                <td>@user.TotalScore</td>
+            </tr>
+        }
+    </table>
+</div>

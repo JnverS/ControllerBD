@@ -1,3 +1,24 @@
-﻿@model User
+﻿
+<div>
+    @if (@Model == null)
+    {
+        <mark>Пользователь не найден</mark>
+    }
+    else
+    {
+        <table>
+            <tr>
+                <td><p>Ник</p></td>
+                <td><p>Уровень</p></td>
+                <td><p>Счет</p></td>
+            </tr>
+            <tr>
+                <td>@Model.NickName</td>
+                <td>@Model.Lvl</td>
+                <td>@Model.TotalScore</td>
+            </tr>
+        </table>
+    }
+</div>
 
-@Html.Partial("AllUsers", Model)
+
